@@ -1,0 +1,28 @@
+
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#F8FAFC"/>
+  
+  <!-- E-commerce Platform Illustration -->
+  <rect x="50" y="50" width="500" height="300" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="70" y="70" width="460" height="40" rx="4" fill="#3B82F6" opacity="0.1"/>
+  <rect x="80" y="80" width="60" height="20" rx="2" fill="#3B82F6"/>
+  <text x="150" y="95" font-family="Inter" font-size="14" font-weight="600" fill="#1F2937">E-Commerce Platform</text>
+  
+  <!-- Product Grid -->
+  <rect x="80" y="130" width="100" height="80" rx="4" fill="#F3F4F6" stroke="#E5E7EB"/>
+  <rect x="200" y="130" width="100" height="80" rx="4" fill="#F3F4F6" stroke="#E5E7EB"/>
+  <rect x="320" y="130" width="100" height="80" rx="4" fill="#F3F4F6" stroke="#E5E7EB"/>
+  <rect x="440" y="130" width="100" height="80" rx="4" fill="#F3F4F6" stroke="#E5E7EB"/>
+  
+  <!-- Shopping Cart -->
+  <rect x="80" y="230" width="460" height="60" rx="4" fill="#EFF6FF" stroke="#DBEAFE"/>
+  <rect x="90" y="240" width="40" height="40" rx="4" fill="#3B82F6" opacity="0.2"/>
+  <text x="140" y="255" font-family="Inter" font-size="12" fill="#374151">Shopping Cart</text>
+  <text x="140" y="275" font-family="Inter" font-size="10" fill="#6B7280">AI-Powered Recommendations</text>
+  
+  <!-- Analytics Dashboard -->
+  <rect x="80" y="310" width="460" height="30" rx="4" fill="#F0FDF4" stroke="#DCFCE7"/>
+  <text x="90" y="330" font-family="Inter" font-size="10" fill="#065F46">Real-time Analytics Dashboard</text>
+</svg>
