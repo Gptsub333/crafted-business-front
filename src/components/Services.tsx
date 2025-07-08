@@ -1,55 +1,72 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      title: "Custom Software Development",
-      description: "Tailored solutions built from scratch to meet your specific business requirements and objectives.",
-      icon: "💻",
-      features: ["Full-stack Development", "API Integration", "Database Design", "Performance Optimization"]
+      title: "Enterprise Data Platforms",
+      description: "Build scalable data infrastructure that transforms raw information into actionable business intelligence.",
+      icon: "🔗",
+      features: ["Real-time Analytics", "Data Integration", "Machine Learning Pipelines", "Compliance & Security"],
+      gradient: "from-blue-500/10 to-cyan-500/10",
+      border: "border-blue-500/20"
     },
     {
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services to enhance your business agility.",
+      title: "Cloud-Native Applications",
+      description: "Develop resilient, scalable applications built for modern cloud infrastructure and global deployment.",
       icon: "☁️",
-      features: ["AWS/Azure Migration", "DevOps Implementation", "Microservices Architecture", "Auto-scaling Solutions"]
+      features: ["Microservices Architecture", "Container Orchestration", "Auto-scaling", "Global CDN"],
+      gradient: "from-purple-500/10 to-pink-500/10",
+      border: "border-purple-500/20"
     },
     {
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences.",
-      icon: "📱",
-      features: ["iOS & Android", "React Native", "Flutter", "App Store Optimization"]
-    },
-    {
-      title: "AI & Machine Learning",
-      description: "Intelligent solutions powered by artificial intelligence and machine learning algorithms.",
-      icon: "🤖",
-      features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Automation Solutions"]
+      title: "AI & Decision Intelligence",
+      description: "Leverage artificial intelligence to automate decisions and unlock insights from complex datasets.",
+      icon: "🧠",
+      features: ["Predictive Modeling", "Natural Language Processing", "Computer Vision", "Automated Insights"],
+      gradient: "from-green-500/10 to-emerald-500/10",
+      border: "border-green-500/20"
     },
     {
       title: "Digital Transformation",
-      description: "Complete digital overhaul to modernize your business processes and technology stack.",
-      icon: "🚀",
-      features: ["Process Automation", "Legacy System Modernization", "Digital Strategy", "Change Management"]
+      description: "Modernize legacy systems and processes with cutting-edge technology and strategic implementation.",
+      icon: "⚡",
+      features: ["Legacy Modernization", "Process Automation", "Integration Strategy", "Change Management"],
+      gradient: "from-orange-500/10 to-red-500/10",
+      border: "border-orange-500/20"
     },
     {
       title: "Cybersecurity Solutions",
-      description: "Comprehensive security measures to protect your business from evolving cyber threats.",
-      icon: "🔐",
-      features: ["Security Audits", "Penetration Testing", "Compliance Management", "Incident Response"]
+      description: "Protect critical assets with enterprise-grade security frameworks and threat intelligence.",
+      icon: "🛡️",
+      features: ["Zero Trust Architecture", "Threat Detection", "Compliance Management", "Security Operations"],
+      gradient: "from-indigo-500/10 to-blue-500/10",
+      border: "border-indigo-500/20"
+    },
+    {
+      title: "Custom Software Development",
+      description: "Engineer bespoke solutions tailored to unique business requirements and operational workflows.",
+      icon: "⚙️",
+      features: ["Full-stack Development", "API Design", "Database Architecture", "Performance Optimization"],
+      gradient: "from-teal-500/10 to-cyan-500/10",
+      border: "border-teal-500/20"
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-24 bg-gray-950 text-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-playfair text-5xl font-bold text-gray-900 mb-6">
-            Our Services
+        <div className="max-w-3xl mb-20 animate-fade-in">
+          <h2 className="font-playfair text-5xl md:text-6xl font-bold mb-8">
+            Capabilities That
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              Define Excellence
+            </span>
           </h2>
-          <p className="font-inter text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive software solutions designed to elevate your business to new heights
+          <p className="font-inter text-xl text-gray-300 leading-relaxed">
+            We architect and deploy mission-critical software solutions that scale with your ambitions. 
+            Every system we build is designed for performance, security, and long-term value creation.
           </p>
         </div>
 
@@ -57,27 +74,35 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-2xl transition-all duration-300 hover:scale-105 border-0 shadow-lg animate-scale-in"
+              className={`group bg-gradient-to-br ${service.gradient} border ${service.border} hover:scale-105 transition-all duration-500 hover:shadow-2xl animate-scale-in`}
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <CardContent className="p-8 h-full flex flex-col">
+                <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h3 className="font-playfair text-2xl font-semibold text-gray-900 mb-4">
+                
+                <h3 className="font-playfair text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
-                <p className="font-inter text-gray-600 mb-6 leading-relaxed">
+                
+                <p className="font-inter text-gray-300 mb-6 leading-relaxed flex-grow">
                   {service.description}
                 </p>
-                <ul className="space-y-2">
+
+                <div className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="font-inter text-sm text-gray-500 flex items-center">
-                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                      {feature}
-                    </li>
+                    <div key={featureIndex} className="flex items-center">
+                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3"></div>
+                      <span className="font-inter text-sm text-gray-400">{feature}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
+
+                <div className="flex items-center text-blue-400 font-inter text-sm font-medium group-hover:text-blue-300 transition-colors cursor-pointer">
+                  Learn More
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
               </CardContent>
             </Card>
           ))}

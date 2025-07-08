@@ -2,52 +2,68 @@
 const Industries = () => {
   const industries = [
     {
-      name: "Healthcare",
-      description: "Revolutionizing patient care with secure, compliant software solutions",
-      icon: "🏥",
-      solutions: ["Electronic Health Records", "Telemedicine Platforms", "Medical Device Integration", "Healthcare Analytics"]
+      name: "Government & Defense",
+      description: "Secure, mission-critical systems for national security and public sector operations",
+      icon: "🛡️",
+      solutions: ["Intelligence Platforms", "Secure Communications", "Data Analytics", "Compliance Systems"],
+      gradient: "from-red-500/10 to-orange-500/10",
+      border: "border-red-500/20"
     },
     {
-      name: "Finance & Banking",
-      description: "Secure, scalable financial technology solutions for modern banking",
-      icon: "🏦",
-      solutions: ["Digital Banking", "Payment Processing", "Fraud Detection", "Regulatory Compliance"]
+      name: "Financial Services",
+      description: "Risk management and trading platforms for global financial institutions",
+      icon: "💹",
+      solutions: ["Risk Analytics", "Trading Systems", "Compliance Tools", "Fraud Detection"],
+      gradient: "from-green-500/10 to-emerald-500/10",
+      border: "border-green-500/20"
     },
     {
-      name: "E-commerce & Retail",
-      description: "Driving online sales with powerful e-commerce platforms and tools",
-      icon: "🛒",
-      solutions: ["Online Marketplaces", "Inventory Management", "Customer Analytics", "Mobile Commerce"]
+      name: "Healthcare & Life Sciences",
+      description: "Data-driven solutions advancing medical research and patient outcomes",
+      icon: "🧬",
+      solutions: ["Clinical Data Management", "Drug Discovery", "Patient Analytics", "Regulatory Compliance"],
+      gradient: "from-blue-500/10 to-cyan-500/10",
+      border: "border-blue-500/20"
     },
     {
-      name: "Manufacturing",
-      description: "Smart manufacturing solutions for Industry 4.0 transformation",
+      name: "Energy & Utilities",
+      description: "Optimizing operations and sustainability across energy infrastructure",
+      icon: "⚡",
+      solutions: ["Grid Management", "Predictive Maintenance", "Asset Optimization", "Sustainability Analytics"],
+      gradient: "from-yellow-500/10 to-orange-500/10",
+      border: "border-yellow-500/20"
+    },
+    {
+      name: "Manufacturing & Supply Chain",
+      description: "Industrial IoT and supply chain visibility for operational excellence",
       icon: "🏭",
-      solutions: ["IoT Integration", "Supply Chain Management", "Quality Control Systems", "Predictive Maintenance"]
+      solutions: ["Supply Chain Visibility", "Quality Control", "Predictive Maintenance", "IoT Integration"],
+      gradient: "from-purple-500/10 to-pink-500/10",
+      border: "border-purple-500/20"
     },
     {
-      name: "Education",
-      description: "Innovative educational technology to enhance learning experiences",
-      icon: "🎓",
-      solutions: ["Learning Management Systems", "Virtual Classrooms", "Student Information Systems", "Educational Apps"]
-    },
-    {
-      name: "Real Estate",
-      description: "Digital solutions transforming property management and sales",
-      icon: "🏢",
-      solutions: ["Property Management", "Virtual Tours", "CRM Systems", "Market Analytics"]
+      name: "Technology & Media",
+      description: "Scalable platforms powering digital transformation and content delivery",
+      icon: "💻",
+      solutions: ["Content Management", "User Analytics", "Recommendation Engines", "Cloud Infrastructure"],
+      gradient: "from-indigo-500/10 to-blue-500/10",
+      border: "border-indigo-500/20"
     }
   ];
 
   return (
-    <section id="industries" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="industries" className="py-24 bg-black text-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-playfair text-5xl font-bold text-gray-900 mb-6">
-            Industries We Serve
+        <div className="max-w-4xl mb-20 animate-fade-in">
+          <h2 className="font-playfair text-5xl md:text-6xl font-bold mb-8">
+            Industries We
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Transform
+            </span>
           </h2>
-          <p className="font-inter text-xl text-gray-600 max-w-3xl mx-auto">
-            Delivering specialized solutions across diverse industries with deep domain expertise
+          <p className="font-inter text-xl text-gray-300 leading-relaxed">
+            From government agencies to Fortune 500 enterprises, we deliver specialized solutions 
+            that address the unique challenges of mission-critical industries.
           </p>
         </div>
 
@@ -55,26 +71,32 @@ const Industries = () => {
           {industries.map((industry, index) => (
             <div 
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-slide-in-left"
+              className={`bg-gradient-to-br ${industry.gradient} border ${industry.border} rounded-2xl p-8 hover:scale-105 transition-all duration-500 hover:shadow-2xl animate-slide-in-left group`}
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className="text-5xl mb-4 text-center">
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 {industry.icon}
               </div>
-              <h3 className="font-playfair text-2xl font-semibold text-gray-900 mb-4 text-center">
+              
+              <h3 className="font-playfair text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors">
                 {industry.name}
               </h3>
-              <p className="font-inter text-gray-600 mb-6 text-center leading-relaxed">
+              
+              <p className="font-inter text-gray-300 mb-6 leading-relaxed">
                 {industry.description}
               </p>
+              
               <div className="space-y-3">
                 {industry.solutions.map((solution, solutionIndex) => (
                   <div key={solutionIndex} className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                    <span className="font-inter text-sm text-gray-700">{solution}</span>
+                    <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3"></div>
+                    <span className="font-inter text-sm text-gray-400">{solution}</span>
                   </div>
                 ))}
               </div>
+
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-pink-500/0 group-hover:from-purple-500/5 group-hover:to-pink-500/5 rounded-2xl transition-all duration-500"></div>
             </div>
           ))}
         </div>

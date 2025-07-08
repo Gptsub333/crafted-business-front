@@ -2,68 +2,80 @@
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
-    "Services": [
-      "Custom Development",
-      "Cloud Solutions",
-      "Mobile Apps",
-      "AI & ML",
-      "Digital Transformation",
-      "Cybersecurity"
+  const footerSections = {
+    "Platform": [
+      "Data Integration",
+      "Analytics Engine",
+      "Security Framework",
+      "API Documentation",
+      "Developer Tools",
+      "System Status"
     ],
-    "Industries": [
-      "Healthcare",
-      "Finance",
-      "E-commerce",
-      "Manufacturing",
-      "Education",
-      "Real Estate"
+    "Solutions": [
+      "Enterprise Data",
+      "Government Intelligence",
+      "Financial Risk",
+      "Healthcare Analytics",
+      "Energy Optimization",
+      "Supply Chain Visibility"
+    ],
+    "Resources": [
+      "Case Studies",
+      "White Papers",
+      "Technical Docs",
+      "Training Center",
+      "Community Forum",
+      "Support Portal"
     ],
     "Company": [
-      "About Us",
-      "Our Team",
+      "About Vsiss",
+      "Leadership Team",
       "Careers",
-      "Case Studies",
-      "Blog",
-      "Contact"
+      "Press Center",
+      "Investor Relations",
+      "Contact Us"
     ]
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-16 relative overflow-hidden">
-      {/* Animated Background */}
+    <footer className="bg-gray-950 text-white py-20 relative overflow-hidden border-t border-gray-800">
+      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-40 h-40 bg-blue-600 rounded-full animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-60 h-60 bg-purple-600 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+          {/* Company Info */}
           <div className="lg:col-span-1 animate-fade-in">
-            <div className="font-playfair text-3xl font-bold mb-4 hover:text-blue-400 transition-colors">
+            <div className="font-playfair text-3xl font-bold mb-6 text-white">
               Vsiss-Solutions
             </div>
-            <p className="font-inter text-gray-400 mb-6 leading-relaxed">
-              Transforming businesses through innovative software solutions and cutting-edge technology.
+            <p className="font-inter text-gray-400 mb-8 leading-relaxed">
+              Building the software that powers critical decisions for the world's most important institutions.
             </p>
-            <div className="font-jetbrains text-sm text-gray-500 animate-pulse">
-              &lt;innovation&gt;<br/>
-              &nbsp;&nbsp;since 2014<br/>
-              &lt;/innovation&gt;
+            <div className="space-y-4">
+              <div className="text-sm text-gray-500 font-jetbrains">
+                &lt;enterprise&gt;<br/>
+                &nbsp;&nbsp;since 2014<br/>
+                &lt;/enterprise&gt;
+              </div>
             </div>
           </div>
 
-          {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
+          {/* Footer Links */}
+          {Object.entries(footerSections).map(([category, links], categoryIndex) => (
             <div key={category} className="animate-slide-in-left" style={{animationDelay: `${categoryIndex * 0.1}s`}}>
-              <h3 className="font-playfair text-xl font-semibold mb-4 hover:text-blue-400 transition-colors">
+              <h3 className="font-playfair text-lg font-semibold mb-6 text-white">
                 {category}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {links.map((link, index) => (
                   <li key={index}>
                     <a 
                       href="#" 
-                      className="font-inter text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2 inline-block"
+                      className="font-inter text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-sm"
                     >
                       {link}
                     </a>
@@ -74,21 +86,35 @@ const Footer = () => {
           ))}
         </div>
 
+        {/* Bottom Section */}
         <div className="border-t border-gray-800 pt-8 animate-fade-in">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="font-inter text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Vsiss-Solutions. All rights reserved.
-            </p>
-            <div className="flex space-x-6">
-              <a href="#" className="font-inter text-gray-400 hover:text-white transition-all duration-300 text-sm hover:scale-105">
-                Privacy Policy
-              </a>
-              <a href="#" className="font-inter text-gray-400 hover:text-white transition-all duration-300 text-sm hover:scale-105">
-                Terms of Service
-              </a>
-              <a href="#" className="font-inter text-gray-400 hover:text-white transition-all duration-300 text-sm hover:scale-105">
-                Cookie Policy
-              </a>
+          <div className="flex flex-col lg:flex-row justify-between items-center">
+            <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 mb-4 lg:mb-0">
+              <p className="font-inter text-gray-400 text-sm">
+                © {currentYear} Vsiss-Solutions. All rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                <a href="#" className="font-inter text-gray-400 hover:text-white transition-colors text-sm">
+                  Privacy Policy
+                </a>
+                <a href="#" className="font-inter text-gray-400 hover:text-white transition-colors text-sm">
+                  Terms of Service
+                </a>
+                <a href="#" className="font-inter text-gray-400 hover:text-white transition-colors text-sm">
+                  Security
+                </a>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <span className="font-inter text-xs text-gray-500">Trusted by</span>
+              <div className="flex space-x-2 text-xs text-gray-400">
+                <span>Government</span>
+                <span>•</span>
+                <span>Fortune 500</span>
+                <span>•</span>
+                <span>Enterprises</span>
+              </div>
             </div>
           </div>
         </div>
