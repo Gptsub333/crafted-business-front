@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
-import { Mail, Phone, Users } from "lucide-react";
+import { LocateIcon, Mail, Phone, Users } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -54,6 +54,12 @@ const Contact = () => {
       title: "Meet Our Team",
       info: "Schedule a Consultation",
       description: "Free strategy session available"
+    },
+    {
+      icon: <LocateIcon className="w-6 h-6" />,
+      title: "Visit Us",
+      info: "26007 Kimberly Rose Dr Chantilly VA 20152",
+      description: "We're open Monday to Friday, 9 AM to 5 PM"
     }
   ];
 
@@ -69,7 +75,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 mx-auto">
           {contactInfo.map((item, index) => (
             <Card key={index} className="animate-scale-in border-0 shadow-lg hover:shadow-xl transition-all duration-300" style={{animationDelay: `${index * 0.1}s`}}>
               <CardContent className="p-8 text-center">
