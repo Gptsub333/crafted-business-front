@@ -19,7 +19,7 @@ const About = () => {
     {
       name: "Sarah Chen",
       role: "CTO",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c04b1faa?w=300&h=300&fit=crop&crop=face",
+      image: "https://plus.unsplash.com/premium_photo-1661918391309-7ddd44addee6?w=300&h=300&fit=crop&crop=face",
       bio: "Expert in cloud architecture and emerging technologies"
     },
     {

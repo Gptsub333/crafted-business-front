@@ -45,15 +45,10 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
-      info: "hello@techflow.com",
+      info: "indu@vsiss-solutions.com",
       description: "Send us your project requirements"
     },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Call Us",
-      info: "+1 (555) 123-4567",
-      description: "Speak with our experts directly"
-    },
+    
     {
       icon: <Users className="w-6 h-6" />,
       title: "Meet Our Team",
@@ -74,7 +69,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
           {contactInfo.map((item, index) => (
             <Card key={index} className="animate-scale-in border-0 shadow-lg hover:shadow-xl transition-all duration-300" style={{animationDelay: `${index * 0.1}s`}}>
               <CardContent className="p-8 text-center">
@@ -84,9 +79,12 @@ const Contact = () => {
                 <h3 className="font-playfair text-xl font-semibold text-gray-900 mb-2">
                   {item.title}
                 </h3>
-                <p className="font-inter font-semibold text-blue-600 mb-2">
+                <a
+                  className="font-inter font-semibold text-blue-600 mb-2 cursor-pointer hover:underline"
+                  href={`mailto:${item.info}`}
+                >
                   {item.info}
-                </p>
+                </a>
                 <p className="font-inter text-gray-600 text-sm">
                   {item.description}
                 </p>
@@ -95,7 +93,7 @@ const Contact = () => {
           ))}
         </div>
 
-        <Card className="max-w-4xl mx-auto animate-fade-in border-0 shadow-2xl">
+        {/* <Card className="max-w-4xl mx-auto animate-fade-in border-0 shadow-2xl">
           <CardContent className="p-8 md:p-12">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -174,7 +172,7 @@ const Contact = () => {
               </Button>
             </form>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </section>
   );

@@ -1,41 +1,20 @@
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerSections = {
-    "Platform": [
-      "Data Integration",
-      "Analytics Engine",
-      "Security Framework",
-      "API Documentation",
-      "Developer Tools",
-      "System Status"
-    ],
-    "Solutions": [
-      "Enterprise Data",
-      "Government Intelligence",
-      "Financial Risk",
-      "Healthcare Analytics",
-      "Energy Optimization",
-      "Supply Chain Visibility"
-    ],
-    "Resources": [
-      "Case Studies",
-      "White Papers",
-      "Technical Docs",
-      "Training Center",
-      "Community Forum",
-      "Support Portal"
-    ],
-    "Company": [
-      "About Vsiss",
-      "Leadership Team",
-      "Careers",
-      "Press Center",
-      "Investor Relations",
-      "Contact Us"
-    ]
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
+
+  const navigationLinks = [
+    { label: "Services", id: "services" },
+    { label: "Portfolio", id: "portfolio" },
+    { label: "Industries", id: "industries" },
+    { label: "About", id: "about" },
+    { label: "Contact", id: "contact" }
+  ];
 
   return (
     <footer className="bg-gray-950 text-white py-20 relative overflow-hidden border-t border-gray-800">
@@ -46,9 +25,9 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           {/* Company Info */}
-          <div className="lg:col-span-1 animate-fade-in">
+          <div className="animate-fade-in">
             <div className="font-playfair text-3xl font-bold mb-6 text-white">
               Vsiss-Solutions
             </div>
@@ -58,32 +37,30 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="text-sm text-gray-500 font-jetbrains">
                 &lt;enterprise&gt;<br/>
-                &nbsp;&nbsp;since 2014<br/>
+                &nbsp;&nbsp;since 2022<br/>
                 &lt;/enterprise&gt;
               </div>
             </div>
           </div>
 
-          {/* Footer Links */}
-          {Object.entries(footerSections).map(([category, links], categoryIndex) => (
-            <div key={category} className="animate-slide-in-left" style={{animationDelay: `${categoryIndex * 0.1}s`}}>
-              <h3 className="font-playfair text-lg font-semibold mb-6 text-white">
-                {category}
-              </h3>
-              <ul className="space-y-3">
-                {links.map((link, index) => (
-                  <li key={index}>
-                    <a 
-                      href="#" 
-                      className="font-inter text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-sm"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Navigation Links */}
+          <div className="animate-slide-in-left">
+            <h3 className="font-playfair text-lg font-semibold mb-6 text-white">
+              Navigation
+            </h3>
+            <ul className="space-y-3">
+              {navigationLinks.map((link, index) => (
+                <li key={index}>
+                  <button 
+                    onClick={() => scrollToSection(link.id)}
+                    className="font-inter text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-sm cursor-pointer"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Section */}
@@ -93,17 +70,6 @@ const Footer = () => {
               <p className="font-inter text-gray-400 text-sm">
                 © {currentYear} Vsiss-Solutions. All rights reserved.
               </p>
-              <div className="flex space-x-6">
-                <a href="#" className="font-inter text-gray-400 hover:text-white transition-colors text-sm">
-                  Privacy Policy
-                </a>
-                <a href="#" className="font-inter text-gray-400 hover:text-white transition-colors text-sm">
-                  Terms of Service
-                </a>
-                <a href="#" className="font-inter text-gray-400 hover:text-white transition-colors text-sm">
-                  Security
-                </a>
-              </div>
             </div>
             
             <div className="flex items-center space-x-4">
@@ -111,9 +77,9 @@ const Footer = () => {
               <div className="flex space-x-2 text-xs text-gray-400">
                 <span>Government</span>
                 <span>•</span>
-                <span>Fortune 500</span>
+                <span>Private Organizations</span>
                 <span>•</span>
-                <span>Enterprises</span>
+                <span>Businesses</span>
               </div>
             </div>
           </div>

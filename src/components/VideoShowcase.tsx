@@ -8,28 +8,28 @@ const VideoShowcase = () => {
     {
       title: "Company Overview",
       description: "Learn about Vsiss-Solutions and our mission to transform businesses through technology",
-      thumbnail: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+      thumbnail: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       duration: "2:30",
       category: "About Us"
     },
     {
       title: "Development Process",
       description: "Behind the scenes look at our agile development methodology and quality assurance",
-      thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
+      thumbnail: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       duration: "3:45",
       category: "Process"
     },
     {
       title: "Client Success Stories",
       description: "Real stories from clients who have transformed their business with our solutions",
-      thumbnail: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop",
+      thumbnail: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       duration: "4:20",
       category: "Success Stories"
     },
     {
       title: "Technology Stack",
       description: "Explore the cutting-edge technologies we use to build scalable solutions",
-      thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
+      thumbnail: "https://plus.unsplash.com/premium_photo-1685086785077-ff65bf749544?q=80&w=2064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       duration: "3:15",
       category: "Technology"
     }
@@ -100,18 +100,7 @@ const VideoShowcase = () => {
           ))}
         </div>
 
-        <div className="text-center animate-fade-in">
-          <div className="inline-flex items-center gap-4 bg-gray-900 rounded-full px-8 py-4 hover:bg-gray-800 transition-colors group">
-            <Volume2 className="text-blue-400 group-hover:scale-110 transition-transform" />
-            <div className="text-left">
-              <div className="font-inter font-semibold text-white">Subscribe for Updates</div>
-              <div className="font-inter text-sm text-gray-400">Get notified when we release new content</div>
-            </div>
-            <Button className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 hover:scale-105">
-              Subscribe
-            </Button>
-          </div>
-        </div>
+      
       </div>
     </section>
   );

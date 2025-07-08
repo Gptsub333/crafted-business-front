@@ -8,7 +8,7 @@ const Portfolio = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with advanced analytics and AI-powered recommendations.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1658297063569-162817482fb6?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       video: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       tech: ["React", "Node.js", "MongoDB", "AI/ML"],
       category: "Web Development"
@@ -16,7 +16,7 @@ const Portfolio = () => {
     {
       title: "Healthcare Management System",
       description: "Comprehensive healthcare platform with patient management and telemedicine features.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1582560469781-1965b9af903d?q=80&w=1586&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       video: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=600&h=400&fit=crop",
       tech: ["Vue.js", "Python", "PostgreSQL", "WebRTC"],
       category: "Healthcare"
@@ -24,7 +24,7 @@ const Portfolio = () => {
     {
       title: "Financial Analytics Dashboard",
       description: "Real-time financial data visualization with predictive analytics and reporting tools.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      image: "https://plus.unsplash.com/premium_photo-1661750032026-bc52bae48094?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       video: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       tech: ["Angular", "Express.js", "MySQL", "D3.js"],
       category: "Finance"
@@ -40,7 +40,7 @@ const Portfolio = () => {
     {
       title: "IoT Manufacturing Suite",
       description: "Industrial IoT platform for smart manufacturing and predictive maintenance.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
+      image: "https://plus.unsplash.com/premium_photo-1688678097473-2ce11d23e30c?q=80&w=1340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       video: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
       tech: ["React", "Node.js", "InfluxDB", "MQTT"],
       category: "Manufacturing"
@@ -48,7 +48,7 @@ const Portfolio = () => {
     {
       title: "AI-Powered CRM",
       description: "Customer relationship management system with AI insights and automation.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      image: "https://plus.unsplash.com/premium_photo-1733306696471-807493ff845b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       video: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=600&h=400&fit=crop",
       tech: ["Next.js", "Python", "TensorFlow", "GraphQL"],
       category: "Business"

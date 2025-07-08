@@ -82,11 +82,11 @@ const Services = () => {
                   {service.icon}
                 </div>
                 
-                <h3 className="font-playfair text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                <h3 className="font-playfair text-2xl font-semibold text-black mb-4 group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
                 
-                <p className="font-inter text-gray-300 mb-6 leading-relaxed flex-grow">
+                <p className="font-inter text-black-300 mb-6 leading-relaxed flex-grow">
                   {service.description}
                 </p>
 
@@ -94,12 +94,12 @@ const Services = () => {
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3"></div>
-                      <span className="font-inter text-sm text-gray-400">{feature}</span>
+                      <span className="font-inter text-sm text-black-400">{feature}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex items-center text-blue-400 font-inter text-sm font-medium group-hover:text-blue-300 transition-colors cursor-pointer">
+                <div className="flex items-center text-blue-500 font-inter text-sm font-medium group-hover:text-blue-300 transition-colors cursor-pointer">
                   Learn More
                   <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>

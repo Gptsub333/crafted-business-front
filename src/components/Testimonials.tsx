@@ -7,7 +7,7 @@ const Testimonials = () => {
     {
       name: "Sarah Johnson",
       position: "CEO, TechStart Inc.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c04b1faa?w=100&h=100&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1619895862022-09114b41f16f?w=100&h=100&fit=crop&crop=face",
       content: "Vsiss-Solutions transformed our business with their innovative approach. The team delivered beyond our expectations, and the results speak for themselves - 300% increase in efficiency!",
       rating: 5,
       company: "TechStart Inc."

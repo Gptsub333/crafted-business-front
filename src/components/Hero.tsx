@@ -22,17 +22,13 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 mt-[4rem]">
         <div className="max-w-5xl mx-auto text-center animate-fade-in">
-          {/* Company Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-8 animate-scale-in" style={{animationDelay: '0.2s'}}>
-            <span className="font-inter text-sm text-blue-400 font-medium">Enterprise Software Solutions</span>
-          </div>
           
           {/* Main Headline */}
           <h1 className="font-playfair text-6xl md:text-8xl font-bold mb-8 leading-tight animate-slide-in-left" style={{animationDelay: '0.4s'}}>
             <span className="block">Data-Driven</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+            <span className="block pb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
               Digital Solutions
             </span>
           </h1>
@@ -47,7 +43,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20 animate-scale-in" style={{animationDelay: '0.8s'}}>
             <Button 
               onClick={scrollToServices}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-inter font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2 group"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-inter font-semibold px-8 py-7 cursor-pointer text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2 group"
             >
               Explore Our Capabilities
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -55,7 +51,7 @@ const Hero = () => {
             <Button 
               variant="outline"
               onClick={() => document.getElementById("contact")?.scrollIntoView({behavior: "smooth"})}
-              className="border-2 border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400 hover:bg-blue-500/5 font-inter font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105"
+              className="border-2 border-gray-600 text-gray-300 cursor-pointer border-blue-500 text-blue-400 bg-blue-500/5 font-inter font-semibold px-8 py-7 text-lg rounded-lg transition-all duration-300 hover:scale-105"
             >
               Schedule Consultation
             </Button>
